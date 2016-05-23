@@ -1,0 +1,49 @@
+
+html {
+	background: #000000;
+	background: radial-gradient(ellipse at center, #404040 0%,#060606 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@font-face {
+	font-family: 'HALBold';
+	src: url('./../fonts/MicrogrammaBold.ttf');
+}
+
+@font-face {
+	font-family: 'HALMedium';
+	src: url('./../fonts/MicrogrammaMedium.ttf');
+}
+
+
+
+
+
+
+span.sm {
+
+	color: #ffffff;
+
+	font-size: 12px;
+	font-family: HALMedium;
+
+
+
+}
+
+span.lg {
+
+	color: #ffffff;
+
+
+
+
+
+
+	font-size: 48px;
+	font-family: HALBold;
+}
