@@ -21,8 +21,13 @@ function createWindow() {
     win.loadURL(`file://${__dirname}/index.html`);
 
     // Open the DevTools.
-    //win.webContents.openDevTools();
+    win.webContents.openDevTools();
 
+
+
+  
+    
+    
     // Emitted when the window is closed.
     win.on('closed', () => {
         // Dereference the window object, usually you would store windows
@@ -57,3 +62,25 @@ app.on('activate', () => {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
+
+
+
+
+console.log('the main event');
+
+var io = require('socket.io-client');
+var serverUrl = 'http://localhost:8080/ns';
+var conn = io.connect(serverUrl);
+
+
+console.log('serverUrl : ' + serverUrl);
+console.log('conn : ' + conn);
+
+var p1 = 'hello';
+conn.emit('call', p1, function(resp, data) {
+    console.log('server sent resp code ' + resp);
+});
+
+conn.on('error', function(){
+    console.log('wah wha');
+});
